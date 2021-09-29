@@ -1,4 +1,5 @@
 # Reinforcement Learning Assignment 1 - Small Gridworld Problem
+**Code has been uploaded to [this github repo](https://github.com/Riften/SJTU-Reinforcement-Learning-2021Aut-Assignments/tree/master/Assignment1).**
 ## Environment
 - python interpreter: Python3.8
 - dependency: numpy
