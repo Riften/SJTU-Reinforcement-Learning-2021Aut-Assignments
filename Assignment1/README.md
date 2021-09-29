@@ -38,22 +38,22 @@ used as the flag for evaluation iteration.
 python main.py
 ====== Iteration 0 ======
 Start Iterative Evaluation ...
-Iteration: 168, Delta: 0.000098
+Iteration: 218, Delta: 0.000096
 Policy Evaluation Result (State Value Function):
-[[ -0.         -10.9999284  -15.49989625 -16.49988834]
- [-10.9999284  -14.49990416 -15.99989259 -15.49989625]
- [-15.49989625 -15.99989259 -14.49990416 -10.9999284 ]
- [-16.49988834 -15.49989625 -10.9999284   -0.        ]]
+[[ -0. -14. -20. -22.]
+ [-14. -18. -20. -20.]
+ [-20. -20. -18. -14.]
+ [-22. -20. -14.  -0.]]
 Improve Policy...
 Current Policy:
 [[b'-' b'<' b'<' b'v']
- [b'^' b'<' b'v' b'v']
+ [b'^' b'^' b'v' b'v']
  [b'^' b'^' b'>' b'v']
- [b'>' b'>' b'>' b'-']]
+ [b'^' b'>' b'>' b'-']]
 
 ====== Iteration 1 ======
 Start Iterative Evaluation ...
-Iteration: 4, Delta: 0.0000004
+Iteration: 4, Delta: 0.000000
 Policy Evaluation Result (State Value Function):
 [[-0. -1. -2. -3.]
  [-1. -2. -3. -2.]
@@ -83,68 +83,5 @@ Current Policy:
 
 Policy is stable
 
-```
-
-### Solving Small Gridworld Problem with Size 6 x 5
-```bash
-python main.py 6 5
-====== Iteration 0 ======
-Start Iterative Evaluation ...
-Iteration: 476, Delta: 0.000098
-Policy Evaluation Result (State Value Function):
-[[ -0.         -23.52656572 -35.52338734 -41.34468167 -43.27257374]
- [-23.47327444 -32.05631606 -38.69892429 -42.23809532 -43.20047382]
- [-35.36351349 -38.52651129 -40.97791255 -41.70831705 -41.09076435]
- [-41.09076435 -41.70831705 -40.97791255 -38.52651129 -35.36351349]
- [-43.20047382 -42.23809532 -38.69892429 -32.05631606 -23.47327444]
- [-43.27257374 -41.34468167 -35.52338734 -23.52656572  -0.        ]]
-Improve Policy...
-Current Policy:
-[[b'-' b'<' b'<' b'<' b'<']
- [b'^' b'<' b'<' b'<' b'v']
- [b'^' b'^' b'<' b'v' b'v']
- [b'^' b'^' b'>' b'v' b'v']
- [b'^' b'>' b'>' b'>' b'v']
- [b'>' b'>' b'>' b'>' b'-']]
-
-====== Iteration 1 ======
-Start Iterative Evaluation ...
-Iteration: 5, Delta: 0.00000027
-Policy Evaluation Result (State Value Function):
-[[-0. -1. -2. -3. -4.]
- [-1. -2. -3. -4. -4.]
- [-2. -3. -4. -4. -3.]
- [-3. -4. -4. -3. -2.]
- [-4. -4. -3. -2. -1.]
- [-4. -3. -2. -1. -0.]]
-Improve Policy...
-Current Policy:
-[[b'-' b'<' b'<' b'<' b'<']
- [b'^' b'^' b'^' b'^' b'v']
- [b'^' b'^' b'^' b'>' b'v']
- [b'^' b'^' b'>' b'>' b'v']
- [b'^' b'>' b'>' b'>' b'v']
- [b'>' b'>' b'>' b'>' b'-']]
-
-====== Iteration 2 ======
-Start Iterative Evaluation ...
-Iteration: 1, Delta: 0.000000
-Policy Evaluation Result (State Value Function):
-[[-0. -1. -2. -3. -4.]
- [-1. -2. -3. -4. -4.]
- [-2. -3. -4. -4. -3.]
- [-3. -4. -4. -3. -2.]
- [-4. -4. -3. -2. -1.]
- [-4. -3. -2. -1. -0.]]
-Improve Policy...
-Current Policy:
-[[b'-' b'<' b'<' b'<' b'<']
- [b'^' b'^' b'^' b'^' b'v']
- [b'^' b'^' b'^' b'>' b'v']
- [b'^' b'^' b'>' b'>' b'v']
- [b'^' b'>' b'>' b'>' b'v']
- [b'>' b'>' b'>' b'>' b'-']]
-
-Policy is stable
-
+Process finished with exit code 0
 ```

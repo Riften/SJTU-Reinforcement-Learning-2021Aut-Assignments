@@ -24,14 +24,14 @@ class GridWorld:
         self.policy[0, 0] *= 0
         self.policy[width - 1, height - 1] *= 0
         # The movement is limited at border
-        for i in range(1, width - 1):
-            self.policy[i, 0, :] = [1 / 3, 1 / 3, 1 / 3, 0]
-            self.policy[i, height - 1, :] = [1 / 3, 0, 1 / 3, 1 / 3]
-        for i in range(1, height - 1):
-            self.policy[0, i, :] = [0, 1 / 3, 1 / 3, 1 / 3]
-            self.policy[width - 1, i, :] = [1 / 3, 1 / 3, 0, 1 / 3]
-        self.policy[0, height - 1] = [0, 0, 1 / 2, 1 / 2]
-        self.policy[width - 1, 0] = [1 / 2, 1 / 2, 0, 0]
+        # for i in range(1, width - 1):
+        #    self.policy[i, 0, :] = [1 / 3, 1 / 3, 1 / 3, 0]
+        #    self.policy[i, height - 1, :] = [1 / 3, 0, 1 / 3, 1 / 3]
+        # for i in range(1, height - 1):
+        #    self.policy[0, i, :] = [0, 1 / 3, 1 / 3, 1 / 3]
+        #    self.policy[width - 1, i, :] = [1 / 3, 1 / 3, 0, 1 / 3]
+        # self.policy[0, height - 1] = [0, 0, 1 / 2, 1 / 2]
+        # self.policy[width - 1, 0] = [1 / 2, 1 / 2, 0, 0]
 
         # Define new variable for convenient
         self.policy_north = self.policy[:, :, 0]
@@ -60,9 +60,13 @@ class GridWorld:
         west_values = np.zeros([self.width, self.height], dtype=float)
 
         north_values[1:self.width, :] = self.state_values[0:self.width - 1, :]
+        north_values[0, :] = self.state_values[0, :]
         east_values[:, 0:self.height - 1] = self.state_values[:, 1:self.height]
+        east_values[:, self.height-1] = self.state_values[:, self.height-1]
         south_values[0:self.width - 1, :] = self.state_values[1:self.width, :]
+        south_values[self.width-1, :] = self.state_values[self.width-1, :]
         west_values[:, 1:self.height] = self.state_values[:, 0:self.height - 1]
+        west_values[:, 0] = self.state_values[:, 0]
         # print('policy north')
         # print(self.policy_north)
         # print('north values')

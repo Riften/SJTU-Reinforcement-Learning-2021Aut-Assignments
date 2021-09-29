@@ -14,6 +14,7 @@ if __name__ == '__main__':
     width = 4
     height = 4
     accuracy = 1e-4
+    np.set_printoptions(3)
     if len(sys.argv) > 1:
         if sys.argv[1] == '-h':
             print(usage)
